@@ -1,0 +1,24 @@
+.card {
+  margin: 0 0 10px;
+}
+
+.card-image {
+  height: 310px;
+}
+
+.card-info-holder {
+  color: white;
+  background: #1e161f2d;
+}
+
+.card-info,
+.card-name {
+  background: rgba(36, 32, 32, 0.521);
+  padding: 0 5px;
+  border-radius: 3px;
+}
+
+.card-name {
+  display: flex;
+  justify-content: space-between;
+}
