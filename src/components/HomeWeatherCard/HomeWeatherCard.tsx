@@ -42,11 +42,15 @@ export const HomeWeatherCard = ({ weather = {} }: any) => {
           <span>{sys?.country}</span>
         </Card.Title>
         <Card.Text className={s['card-info']}>
-          <p>Temperature: {main?.temp.toFixed()}&#176;</p>
-          <p>Feels Like: {main?.feels_like.toFixed()}&#176;</p>
-          <p>Wind speed: {wind?.speed}&#9971;</p>
-          <p>Sunrise: </p>
-          <p>Sunset: </p>
+          <span>Temperature: {main?.temp.toFixed()}&#176;</span>
+          <span>Feels Like: {main?.feels_like.toFixed()}&#176;</span>
+          <span>Wind speed: {wind?.speed}&#9971;</span>
+          <span>
+            Sunrise: {new Date(sys?.sunrise * 1000).toLocaleTimeString()}
+          </span>
+          <span>
+            Sunset: {new Date(sys?.sunset * 1000).toLocaleTimeString()}
+          </span>
         </Card.Text>
         <Button variant="dark">Get details</Button>
       </Card.ImgOverlay>

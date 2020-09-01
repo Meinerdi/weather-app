@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import { fetchHomeWeather } from './actions/actions';
 import Home from './pages/Home/Home';
 import './styles.css';
+import SearchedCity from './pages/SearchedCity/SearchedCity';
 
 const App = ({ fetchHomeWeather }: any) => {
   useEffect(() => {
@@ -14,6 +15,7 @@ const App = ({ fetchHomeWeather }: any) => {
     <>
       <Switch>
         <Route path="/" component={Home} exact />
+        <Route path="/searched-city" component={SearchedCity} />
       </Switch>
     </>
   );
